@@ -18,19 +18,19 @@ Login com sucesso
 Senha incorreta
     Open Login Page
     Login With                  papito@parodify.com         abc123
-    Alert Should Be             Oops! Dados de acesso incorretos!
+    Alert Should Be             Opps! Dados de acesso incorretos!
 
 E-mail não existe
     Open Login Page
     Login With                  lalala@parodify.com         pwd123
-    Alert Should Be             Oops! Dados de acesso incorretos!
+    Alert Should Be             Opps! Dados de acesso incorretos!
 
 E-mail não informado
     Open Login Page
     Login With                  ${EMPTY}                    abc123
-    Alert Should Be             Oops! Dados de acesso incorretos!
+    Alert Should Be             Opps! Dados de acesso incorretos!
 
 Senha não informada
     Open Login Page
     Login With                  papito@parodify.com          ${EMPTY}
-    Alert Should Be             Oops! Dados de acesso incorretos!
+    Alert Should Be             Opps! Dados de acesso incorretos!

@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation           Testanto o player de paródias
+Documentation           Testando o player de paródias
 
 Resource                ../resources/base.robot
 
@@ -11,14 +11,8 @@ Reproduzir paródia Bug de Manhã
     Open Login Page
     Login With                      papito@parodify.com     pwd123
     Logout Link Should Be Visible
-
-    Click                           css=a[href*=search]
-    Get Text                        css=h2      equal       Buscar
-
-    Click                           xpath=//img[contains(@src, "sertanejo.png")]/..
-    Get Text                        css=h2      equal       Sertanejo
-
-    Click                           xpath=//p[contains(text(), "Marcus e Debug")]/..
-    Get Text                        css=h2      equal       Músicas
-
-    Click                           xpath=//h2[contains(text(), "Bug de Manhã")]/../..//div[contains(@class, "play")]//a
+    Go To Search Page
+    Go To Sertanejo Category
+    Open Album From                 Marcus e Debug
+    Play Song                       Bug de Manhã
+    Song Should Be Playing          Bug de Manhã
