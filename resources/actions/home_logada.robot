@@ -1,4 +1,4 @@
-** Settings ***
+*** Settings ***
 Documentation           Ações da página home logada
 
 *** Keywords ***

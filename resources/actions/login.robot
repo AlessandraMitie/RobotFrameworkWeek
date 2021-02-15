@@ -5,11 +5,12 @@ Documentation           Ações da página de login
 *** Keywords ***
 Open Login Page
     Open Browser        https://parodify.herokuapp.com/users/sign_in        chromium
+    #New Page            https://parodify.herokuapp.com/users/sign_in
 
 Login With
-    [Arguments]         ${email_arg}                ${pass_arg}
-    Fill Text           id=user_email               ${email_arg}
-    Fill Text           css=#user_password          ${pass_arg}
+    [Arguments]         ${email_arg}                    ${pass_arg}
+    Fill Text           css=input[name*=email]          ${email_arg}
+    Fill Text           css=#user_password              ${pass_arg}
     Click               css=input[value="Log in"]
 
 Alert Should Be

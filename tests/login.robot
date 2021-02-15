@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation       Testes da página login
 
+Library             Browser
+
 Resource            ../resources/base.robot
 
 #Gancho para tirar screenshot após a execução de cada teste
